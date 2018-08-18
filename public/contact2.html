@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <LINK rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body ng-app="Application">
+<div class="gtco-loader"></div>
+<div id="page">
+
+    <!-- END #gtco-header -->
+
+    <div class="container" style="width: 100%;">
+
+        <div ng-controller="ContactController">
+            <div class="row" ng-hide="confirm">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                    <div class="panel">
+                        <div class="panel-body field-pane" style="border-radius: 4px;">
+                            <div ng-show="progress"
+                                 style="z-index:20000;position:fixed;top:50%;left:50%;margin-top:-70px;margin-left:-75px;">
+                                <div id="progress">
+                                    <div id="rond">
+                                        <div id="test"></div>
+                                    </div>
+                                    <div id="load"></div>
+                                </div>
+                            </div>
+                            <div id="input">
+                                <form name="inq">
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row" ng-show="other">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div for="property_" class="input-label">その他の内容
+                                                <span ng-messages="inq.property.$error" ng-if="inq.property.$dirty">
+                                                    <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <span ng-messages="inq.property.$error" ng-if="inq.property.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="text" ng-class="{'valid-field':inq.property.$valid,'invalid-field':!inq.property.$valid }" class="form-control input-element field-background" id="property" ng-model="form.property" ng-maxlength="100" required="" name="property_">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">お名前
+                                                <span ng-if="!inq.username.$dirty">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <span ng-messages="inq.username.$error" ng-if="inq.username.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                            </span>
+                                            <input autocomplete="hoge" ng-class="{'valid-field':inq.username.$valid,'invalid-field':!inq.username.$valid }" type="text" class="form-control input-element field-background" id="username" ng-model="form.username" ng-maxlength="100" required="" name="username">
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">連絡先電話番号&nbsp;
+                                                <span ng-if="!inq.contacttel.$dirty">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <span ng-messages="inq.contacttel.$error" ng-if="inq.contacttel.$dirty">
+                                                <span ng-message="includeTelNumber" class="validation-error error-background-tooltip">&nbsp;数字で入力してください。&nbsp;</span>
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;15文字以内で入力してください。&nbsp;</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="text" placeholder="0663151115" ng-class="{'valid-field':inq.contacttel.$valid,'invalid-field':!inq.contacttel.$valid }" class="form-control input-element field-background" id="contacttel" ng-model="form.contacttel" include-tel-number="" ng-maxlength="30" required="" name="contacttel">
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="input-caption">(数字)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">メールアドレス
+                                                <span ng-if="!inq.contactmail.$valid">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <span ng-messages="inq.contactmail.$error" ng-if="inq.contactmail.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;210文字以内で入力してください。&nbsp;</span>
+                                                <span ng-message="email" class="validation-error error-background-tooltip">&nbsp;メールアドレスの形式で入力してください。&nbsp;</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="email" placeholder="mail@baddress" ng-class="{'valid-field':inq.contactmail.$valid,'invalid-field':!inq.contactmail.$valid }" class="form-control input-element field-background" id="contactmail" ng-model="form.thanks" ng-maxlength="210" required="" name="contactmail">
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="input-caption">(半角英数記号)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">郵便番号(ご自宅)
+                                                <span ng-if="!inq.zip.$valid">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <span ng-messages="inq.zip.$error" ng-if="inq.zip.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;8文字以内で入力してください。&nbsp;</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="text" class="form-control input-element field-background" ng-class="{'valid-field':inq.zip.$valid,'invalid-field':!inq.zip.$valid }" id="zip" size="10" ng-change="Zip(form.zip);" ng-maxlength="8" required="" ng-model="form.zip" name="zip">
+                                        </div>
+                                        <div class="col-xs-12 col-md-1">
+                                            <span class="input-caption">(数字)</span>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <span class="help-block input-caption">※郵便番号から自動入力されます。
+                                                <a href="http://www.post.japanpost.jp/zipcode/" target="_blank"><span class="link">郵便番号検索</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">都道府県(ご自宅)
+                                                <span ng-if="!inq.pref.$valid">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                                <span ng-messages="inq.pref.$error" ng-if="inq.pref.$dirty">
+                                                    <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <select autocomplete="hoge" id="pref" name="pref" class="form-control input-element field-background" ng-class="{'valid-field':inq.pref.$valid,'invalid-field':!inq.pref.$valid }" ng-model="form.pref" ng-options="pref for pref in selects" required="">
+                                                <option value='' disabled selected>▼選択してください</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">市町村・番地・ビル名&nbsp;
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <span ng-messages="inq.street.$error" ng-if="inq.street.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="text" placeholder="address..." class="form-control input-element field-background" id="street" ng-model="form.street" ng-maxlength="100" name="street">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group row" ng-show="other2">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">その他の内容
+                                                <span ng-messages="inq.trigger.$error" ng-if="inq.trigger.$dirty">
+                                                    <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <span ng-messages="inq.trigger.$error" ng-if="inq.trigger.$dirty">
+                                                <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。</span>
+                                            </span>
+                                            <input autocomplete="hoge" type="text" ng-class="{'valid-field':inq.trigger.$valid,'invalid-field':!inq.trigger.$valid }" class="form-control input-element field-background" id="trigger" ng-model="form.trigger" ng-maxlength="100" required="" name="trigger_">
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">ご要望
+                                                <span ng-messages="inq.request.$error" ng-if="inq.request.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-md-6">
+                                            <textarea rows="5" class="form-control field-background" id="request" ng-model="form.request" ng-maxlength="100" name="request"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <div class="input-label">個人情報の取扱いについて
+                                                <span ng-if="!inq.personal_information.$dirty">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                                <span ng-messages="inq.personal_information.$error" ng-if="inq.personal_information.$dirty">
+                                                    <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                            <input autocomplete="hoge" type="checkbox" ng-model="personal_information" required="" name="personal_information"><span class="input-label">同意する</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row under-line"></div>
+
+                                    <div class="form-group text-center row">
+                                        <button ng-show="!inq.$valid" class="btn text-center" style="width:100%;font-size:1.6rem;background-color:#2f8ad1;color:#ffffff;" ng-click="">未入力の必須項目、<br/>または入力内容にエラーがあります。<br/><span style="font-size:1.4rem;">クリックすると該当箇所に移動します。</span>
+                                        </button>
+                                        <button ng-show="inq.$valid" class="btn text-center" style="width:100%;font-size:1.6rem;background-color:#f39d1f;color:#ffffff;" ng-click="Send();" ng-disabled="progress">送信する
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div ng-show="false">
+                                <input ng-model="form.report" ng-show="false" name="report" type="email" required="true" class="form-control no-zoom" id="report" ng-init="form.report = 'report@address';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END .gtco-services -->
+    <!--<ds:include src='/|{#userid}|/|{#namespace}|/static/footer.html'></ds:include>-->
+</div>
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-sanitize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-messages.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-aria.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<script type="text/javascript" src="/js/contact_application.js"></script>
+<script type="text/javascript" src="/js/contact_controllers.js"></script>
+<script type="text/javascript" src="/js/contact_services.js"></script>
+
+<script src="/js/main2.js"></script>
+
+</body>
+</html>
