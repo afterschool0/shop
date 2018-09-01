@@ -3,13 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cocoro ~ Kiseki & Shinpi</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="placenta cancer health beauty" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="Cocoro" />
-
-
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -20,16 +18,17 @@
     <meta name="twitter:image" content=""/>
     <meta name="twitter:url" content=""/>
     <meta name="twitter:card" content=""/>
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <LINK rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+    <link rel="stylesheet" href="/contact/css/style.css">
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="css/icomoon.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- Flexslider  -->
     <link rel="stylesheet" href="css/flexslider.css">
@@ -49,11 +48,161 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+
+    <!-- Modernizr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+
+    <style>
+
+        .article-title {
+            box-sizing: border-box;
+            color: #ffffff;
+            background: rgb(243, 157, 31);
+            font-size: 2.4rem;
+            margin: 1rem;
+            padding: 0.8rem;
+        }
+
+        .article-box {
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin: 1rem;
+            padding: 0.8rem;
+        }
+
+        .list-head {
+            font-size: 1.8rem;
+            padding: 0.8rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+            background: #444444;
+        }
+
+        .list-style {
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .list-foot {
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .label-rect-normal {
+            height: 5.6rem;
+            display: block;
+            font-size: 1rem;
+            padding: 0.6rem;
+            color: #343660;
+        }
+
+        .label-rect {
+            position: absolute;
+            top: 0;
+            /*  height: 5.6rem;  */
+            display: block;
+            line-height: 1.4rem;
+            padding: 0.4rem;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px #000000;
+        }
+
+        .large-button {
+            padding: 2rem;
+            color: #ffffff;
+            font-size: 2rem;
+            padding: 1rem;
+            background-color: #1B95E0;
+            box-shadow: none;
+            border-radius: 3px;
+            transition-timing-function: ease-in-out;
+            transition: 0.8s;
+        }
+
+        .large-button:hover {
+            background-color: #00f6ff;
+            box-shadow: 0 4px 6px 0 rgba(40, 40, 200, 0.3);
+        }
+
+        .bg-checkbox {
+            padding: 0;
+            transition: 0.8s;
+        }
+
+        .bg-checkbox:hover {
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 100, 0.2));
+        }
+
+        .bg-checkbox input {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-checkbox input[type="checkbox"] + label {
+            display: block;
+            background-position: left center;
+            background-repeat: no-repeat;
+            border: solid 0.6rem #1B95E0;
+            border-radius: 10px;
+            transition-timing-function: ease-in-out;
+            transition: 0.2s;
+            filter: grayscale(70%);
+        }
+
+        .bg-checkbox input[type="checkbox"]:checked + label {
+            border: solid 0.6rem rgb(255, 198, 0);
+            filter: grayscale(0%);
+        }
+
+        .photo-top-radius {
+            border-radius: 6px 6px 0 0;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+
+        .pointer-cursor {
+            cursor: pointer;
+        }
+
+        .hidden-block {
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition-timing-function: ease-in-out;
+            transition: 0.8s;
+        }
+
+        .show-block {
+            padding: 10px 0;
+            height: auto;
+            opacity: 1;
+        }
+
+        .flex-cell {
+            flex-basis: 160px;
+        }
+
+    </style>
+
 </head>
-<body>
+<body ng-app="Application">
 
-<div class="fh5co-loader"></div>
-
+<div class="gtco-loader"></div>
 <div id="page">
     <nav class="fh5co-nav" role="navigation">
         <div class="container">
@@ -99,7 +248,6 @@
 
         </div>
     </nav>
-
     <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
         <div class="overlay"></div>
         <div class="container">
@@ -118,211 +266,519 @@
 
     <div id="fh5co-contact">
         <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-md-push-1 animate-box">
 
-                    <div class="fh5co-contact-info">
-                        <h3>Contact Information</h3>
-                        <ul>
-                            <li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-                            <li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-                            <li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-                            <li class="url"><a href="http://gettemplates.co">gettemplates.co</a></li>
-                        </ul>
+            <div ng-controller="ContactController">
+                <div class="row" ng-show="status == 0">
+
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <div class="panel">
+                            <div class="panel-body field-pane" style="border-radius: 4px;">
+                                <div ng-show="progress" style="z-index:20000;position:fixed;top:50%;left:50%;margin-top:-70px;margin-left:-75px;">
+                                    <div id="progress">
+                                        <div id="rond">
+                                            <div id="test"></div>
+                                        </div>
+                                        <div id="load"></div>
+                                    </div>
+                                </div>
+                                <div id="input">
+                                    <form name="inq">
+<!--
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row" id="property0">
+                                            <div class="col-xs-12 col-sm-4" style="margin-bottom: 10px;">
+                                                <span class="input-label">ご職業・業種</span>
+                                                <span ng-if="!inq.property.$dirty">
+                                                    <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4">
+                                                <select autocomplete="hoge" id="property" ng-change="change_property();" ng-class="{'valid-field':inq.property.$valid,'invalid-field':!inq.property.$valid }" ng-model="form.property" ng-options="property for property in properties" class="form-control input-element field-background" required="" name="property">
+                                                    <option value='' disabled selected>▼選択してください</option>
+                                                </select>
+                                                <div ng-show="other" style="position: absolute;top: 6px;left: 20px;">その他</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row" ng-show="other">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div for="property_" class="input-label">その他の内容
+                                                    <span ng-messages="inq.property.$error" ng-if="inq.property.$dirty">
+                                                        <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.property.$error" ng-if="inq.property.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" ng-class="{'valid-field':inq.property.$valid,'invalid-field':!inq.property.$valid }" class="form-control input-element field-background" id="property" ng-model="form.property" ng-maxlength="100" required="" name="property_">
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">貴社名</div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.companyname.$error" ng-if="inq.companyname.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" placeholder="株式会社ブロードエンタープライズ" class="form-control input-element field-background" id="companyname" ng-model="form.companyname" ng-maxlength="100" name="companyname">
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+-->
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.username.$dirty">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <span ng-messages="inq.username.$error" ng-if="inq.username.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" ng-class="{'valid-field':inq.username.$valid,'invalid-field':!inq.username.$valid }" type="text" class="form-control input-element field-background" id="username" ng-model="form.username" ng-maxlength="100" required="" name="username"  placeholder="Your name">
+                                            </div>
+                                        </div>
+
+                                        <!--
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">お名前(フリガナ)
+                                                    <span ng-if="!inq.furigana.$dirty">
+                                                        <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <span ng-messages="inq.furigana.$error" ng-if="inq.furigana.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                                    <span ng-message="pattern" class="validation-error error-background-tooltip">&nbsp;カタカナかひらがなで入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" ng-class="{'valid-field':inq.furigana.$valid,'invalid-field':!inq.furigana.$valid }" class="form-control input-element field-background" id="furigana" ng-model="form.furigana" ng-pattern="/^[ぁ-んァ-ン \s]+$/" ng-maxlength="100" required="" name="furigana">
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="input-caption">(全角カタカナか全角ひらがな)</div>
+                                            </div>
+                                        </div>
+-->
+
+                                        <div class="row under-line"></div>
+
+<!--
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">郵便番号(ご自宅)
+                                                    <span ng-if="!inq.zip.$valid">
+                                                        <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <span ng-messages="inq.zip.$error" ng-if="inq.zip.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;8文字以内で入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" class="form-control input-element field-background" ng-class="{'valid-field':inq.zip.$valid,'invalid-field':!inq.zip.$valid }" id="zip" size="10" ng-change="Zip(form.zip);" ng-maxlength="8" required="" ng-model="form.zip" name="zip">
+                                            </div>
+                                            <div class="col-xs-12 col-md-1">
+                                                <span class="input-caption">(数字)</span>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <span class="help-block input-caption">※郵便番号から自動入力されます。
+                                                    <a href="http://www.post.japanpost.jp/zipcode/" target="_blank"><span class="link">郵便番号検索</span></a>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">都道府県(ご自宅)
+                                                    <span ng-if="!inq.pref.$valid">
+                                                        <span class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                    </span>
+                                                    <span ng-messages="inq.pref.$error" ng-if="inq.pref.$dirty">
+                                                        <span ng-message="required" class="validation-error error-background">&nbsp;必須&nbsp;</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <select autocomplete="hoge" id="pref" name="pref" class="form-control input-element field-background" ng-class="{'valid-field':inq.pref.$valid,'invalid-field':!inq.pref.$valid }" ng-model="form.pref" ng-options="pref for pref in selects" required="">
+                                                    <option value='' disabled selected>▼選択してください</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>-->
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label"></div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.street.$error" ng-if="inq.street.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" placeholder="Your Address" class="form-control input-element field-background" id="street" ng-model="form.street" ng-maxlength="100" name="street">
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.contacttel.$dirty">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.contacttel.$error" ng-if="inq.contacttel.$dirty">
+                                                    <span ng-message="includeTelNumber" class="validation-error error-background-tooltip">&nbsp;数字で入力してください。&nbsp;</span>
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;15文字以内で入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="text" placeholder="Your Tel" ng-class="{'valid-field':inq.contacttel.$valid,'invalid-field':!inq.contacttel.$valid }" class="form-control input-element field-background" id="contacttel" ng-model="form.contacttel" include-tel-number="" ng-maxlength="30" required="" name="contacttel">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.contactmail.$valid">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.contactmail.$error" ng-if="inq.contactmail.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;210&nbsp;</span>
+                                                    <span ng-message="email" class="validation-error error-background-tooltip">&nbsp;メールアドレスの形式で入力してください。&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="email" placeholder="Your email addreess" ng-class="{'valid-field':inq.contactmail.$valid,'invalid-field':!inq.contactmail.$valid }" class="form-control input-element field-background" id="contactmail" ng-model="form.thanks" ng-maxlength="210" required="" name="contactmail">
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                              
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <label class="checkbox-inline"><input type="checkbox" id="products1" value="cocoro">cocoro</label>
+                                                <label class="checkbox-inline"><input type="checkbox" id="products2" value="cocoro2">cocoro 2</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.contactmail.$valid">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <span ng-messages="inq.introducer.$error" ng-if="inq.introducer.$dirty">
+                                                    <span ng-message="maxlength" class="validation-error error-background-tooltip">&nbsp;210&nbsp;</span>
+                                                </span>
+                                                <input autocomplete="hoge" type="email" placeholder="introducer" ng-class="{'valid-field':inq.contactmail.$valid,'invalid-field':!inq.contactmail.$valid }" class="form-control input-element field-background" id="introducer" ng-model="form.introducer" ng-maxlength="210" required="" name="introducer">
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-messages="inq.request.$error" ng-if="inq.request.$dirty">
+                                                        <span ng-message="maxlength" class="validation-error error-background">&nbsp;100文字以内で入力してください。&nbsp;</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <textarea rows="5" class="form-control field-background" id="request" ng-model="form.request" ng-maxlength="100" name="request"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.personal_information.$dirty">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                    <span ng-messages="inq.personal_information.$error" ng-if="inq.personal_information.$dirty">
+                                                        <span ng-message="required" class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <input autocomplete="hoge" type="checkbox" ng-model="personal_information" required="" name="personal_information"><span class="input-label">同意する</span>
+                                                <div class="text-center" style="font-size:1.2rem;margin-top:1rem;">個人情報保護方針については<a href="/privacypolicy/" target="_blank">こちら</a></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row under-line"></div>
+
+                                        <div class="hidden-xs form-group text-center row">
+                                            <button ng-show="!inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#2f8ad1;color:#ffffff;" ng-click="go_confirm();">未入力の必須項目、<br/>または入力内容にエラーがあります。<br/><span style="font-size:1.4rem;">クリックすると該当箇所に移動します。</span></button>
+                                            <button ng-show="inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#f39d1f;color:#ffffff;" ng-click="go_confirm();">入力内容を確認する</button>
+                                        </div>
+
+                                        <div class="visible-xs form-group text-center row">
+                                            <button ng-show="!inq.$valid" class="btn text-center" style="width:100%;font-size:1.6rem;background-color:#2f8ad1;color:#ffffff;" ng-click="go_confirm();">未入力の必須項目、<br/>または入力内容にエラーがあります。<br/><span style="font-size:1.4rem;">クリックすると該当箇所に移動します。</span></button>
+                                            <button ng-show="inq.$valid" class="btn text-center" style="width:100%;font-size:1.6rem;background-color:#f39d1f;color:#ffffff;" ng-click="go_confirm();">入力内容を確認する</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-                <div class="col-md-6 animate-box">
-                    <h3>Get In Touch</h3>
-                    <form id="contact" action="#">
-                        <div class="row form-group">
-                            <div class="col-md-6">
-                                <!-- <label for="fname">First Name</label> -->
-                                <input type="text" id="name" onkeyup="change('name', 'name','name_label');"
-                                       class="form-control" placeholder="Your name">
-                                <div id="name_label">
-                                    <div class="require">required</div>
+                <div class="row" ng-show="status == 1">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <h3 class="left-line-title-blue" style="margin-bottom:0;">お客様情報入力確認</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <div class="panel">
+                            <div class="panel-body field-pane" style="border-radius: 4px;">
+                                <div ng-show="progress" style="z-index:20000;position:fixed;top:50%;left:50%;margin-top:-70px;margin-left:-75px;">
+                                    <div id="progress">
+                                        <div id="rond">
+                                            <div id="test"></div>
+                                        </div>
+                                        <div id="load"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table class="table table-striped table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <td>ご興味のあるサービス</td>
+                                            <td style="max-width:60rem;">
+                                                <div style="display:flex;flex-wrap: wrap;justify-content:center;">
+                                                    <div class="flex-cell" ng-show="form.check1">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_reno-lease_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">リノリースバック</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check2">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_internetcost_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">インターネット料金</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check3">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_denkicost_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">電気料金</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check4">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_gascost_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">ガス会社の見直し</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check5">
+                                                        <img class="img-responsive" src="/images/topPageNew/maintenance.jpg"/>
+                                                        <div class="text-center label-rect-normal">メンテナンス料金</div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:flex;flex-wrap: wrap;justify-content:center;">
+                                                    <div class="flex-cell" ng-show="form.check11">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_free-internet_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">無料インターネット</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check12">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_security-camera_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">セキュリティカメラ</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check13">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_takuhai-box_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">宅配ボックス</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check14">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_autolock_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">オートロック</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check15">
+                                                        <img class="img-responsive" src="/images/topPageNew/multifunctionlight.jpg"/>
+                                                        <div class="text-center label-rect-normal">Sony製<br/>マルチファンクションライト</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check16">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_key_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">電子錠・スマートロック</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check17">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_trouble-support_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">24時間駆け付けサービス</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check18">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_gaisou_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">外装・外壁工事</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check19">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_tainou_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">滞納回収代行</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check20">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_minpaku_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">民泊</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check21">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_jidouhanbaiki_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">自動販売機</div>
+                                                    </div>
+                                                    <!--<div class="flex-cell" ng-show="form.check22">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_reform_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">リフォーム<br/>リノベーション</div>
+                                                    </div>-->
+                                                    <div class="flex-cell" ng-show="form.check23">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_kensetsu_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">ハウスメーカー<br/>デベロッパー・建設会社</div>
+                                                    </div>
+                                                    <div class="flex-cell" ng-show="form.check24">
+                                                        <img class="img-responsive" src="/images/topPageNew/se_baibai_s.jpg"/>
+                                                        <div class="text-center label-rect-normal">不動産売買仲介業者</div>
+                                                    </div>
+                                                    <!-- <div class="flex-cell" ng-show="form.check25">
+                                                         <img class="img-responsive" src="/images/topPageNew/inheritance.jpg"/>
+                                                         <div class="text-center label-rect-normal">相続対策</div>
+                                                     </div>-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ご職業・業種</td>
+                                            <td>{{form.property}}</td>
+                                        </tr>
+                                        <!--<tr>
+                                            <td>お知りになったきっかけ</td>
+                                            <td>{{form.trigger}}</td>
+                                        </tr>-->
+                                        <tr>
+                                            <td>貴社名</td>
+                                            <td>{{form.companyname}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>お名前</td>
+                                            <td>{{form.username}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>お名前(フリガナ)</td>
+                                            <td>{{form.furigana}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>連絡先電話番号</td>
+                                            <td>{{form.contacttel}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>メールアドレス</td>
+                                            <td><span style="font-size: 1.2em;font-weight: bold;">{{form.thanks}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>郵便番号(ご自宅)</td>
+                                            <td>{{form.zip}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>都道府県(ご自宅)</td>
+                                            <td>{{form.pref}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>市町村・番地・ビル名</td>
+                                            <td>{{form.street}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ご要望</td>
+                                            <td>{{form.request}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>個人情報の取扱いについて</td>
+                                            <td>同意する</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center" style="margin:2rem 0;">
+                                        【重要】メールアドレスの入力間違いが多くなっておりますので、正しいかご確認をお願いいたします。<br/>
+                                        上記ご確認の上、"送信する"ボタンを押してください。
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary" style="font-size:2rem;color:#ffffff;" ng-click="go_input();">戻る</button>
+                                        <button class="btn" style="width:60%;font-size:2rem;background-color:#f39d1f;color:#ffffff;" ng-click="Send();" ng-disabled="progress">送信する</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <!-- <label for="lname">Last Name</label> -->
-                                <input type="text" id="address" onkeyup="change('address','address','address_label');"
-                                       class="form-control" placeholder="Your address">
-                                <div id="address_label">
-                                    <div class="require">required</div>
-                                </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="status == 2">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2 class="wf-noto" style="font-feature-settings:'palt' 1;line-height:5rem;color:#147CB3;font-size:3.4rem;font-weight:600;margin:4rem 0;">お問い合わせありがとうございます</h2>
+                        <div style="font-size:1.8rem;margin:4rem;">
+                            <div>お問い合わせいただいた内容を記載したメールが自動送信されておりますので、お手すきの際にご確認くださいませ。</div>
+                            <br/>
+                            <div>内容を確認の上ご連絡させていただきますので、しばらくお待ち下さい。</div>
+                            <div>お休み中にいただきましたお問い合わせは次の営業日以降、<br/>
+                                順次ご対応いたしますので、ご了承をお願い申し上げます。
                             </div>
+                            <br/><br/>
+                            <div>【確認メールが届かないお客様へ】</div>
+                            <div>・メールアドレスに間違いがないかご確認ください。</div>
+                            <div>・メールのフィルタリング機能を有効にしている方は「削除フォルダ」「迷惑メールフォルダ」もご確認ください。<br/>賃貸経営ネットからのメールはドメイン「broad-e.co.jp」から送信します。「broad-e.co.jp」からのメールを受信許可するよう設定をお願いいたします。</div>
                         </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <!-- <label for="email">Email</label> -->
-                                <input type="text" id="tel" onkeyup="change('tel','tel','tel_label');"
-                                       class="form-control" placeholder="Your tel">
-                                <div id="tel_label">
-                                    <div class="require">required</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <!-- <label for="email">Email</label> -->
-                                <input type="email" id="email" onkeyup="change('email','email','email_label');" class="form-control" placeholder="Your email address">
-                                <div id="email_label">
-                                    <div class="require">required</div>
-                                    <div class="format">format</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="checkbox-inline"><input type="checkbox" id="products1" value="cocoro">cocoro</label>
-                                <label class="checkbox-inline"><input type="checkbox" id="products2" value="cocoro2">cocoro
-                                    2</label>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <!-- <label for="subject">Subject</label> -->
-                                <input type="text" id="introducer"
-                                       onkeyup="change('name','introducer','introducer_label');" class="form-control"
-                                       placeholder="introducer">
-                                <div id="introducer_label">
-                                    <div class="require">required</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <!-- <label for="message">Message</label> -->
-                                <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                                          placeholder="message"></textarea>
-
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="button" onclick="Create();" value="Send Message" class="btn btn-primary">
-                            <div id="complete" style="display:none;">complete</div>
-
-                        </div>
-
-                    </form>
+                        <a class="btn btn-success center-block" style="color:#ffffff;" href="/">TOPに戻る</a>
+                        <div style="font-size:1.4rem;margin:4rem 0;"></div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <div id="map" class="animate-box" data-animate-effect="fadeIn"></div>
-
-    <div id="fh5co-started">
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>Newsletter</h2>
-                    <p>Just stay tune for our latest Product. Now you can subscribe</p>
-                </div>
-            </div>
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                    <form class="form-inline">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <button type="submit" class="btn btn-default btn-block">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer id="fh5co-footer" role="contentinfo">
-        <div class="container">
-            <div class="row row-pb-md">
-                <div class="col-md-4 fh5co-widget">
-                    <h3>Shop.</h3>
-                    <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta
-                        adipisci architecto culpa amet.</p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-                    <ul class="fh5co-footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Meetups</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-                    <ul class="fh5co-footer-links">
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Handbook</a></li>
-                        <li><a href="#">Held Desk</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-                    <ul class="fh5co-footer-links">
-                        <li><a href="#">Find Designers</a></li>
-                        <li><a href="#">Find Developers</a></li>
-                        <li><a href="#">Teams</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">API</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row copyright">
-                <div class="col-md-12 text-center">
-                    <p>
-                        <small class="block">&copy; 2016 Cocoro. co.,ltd. All Rights Reserved.</small>
-
-                    </p>
-                    <p>
-                    <ul class="fh5co-social-icons">
-                        <li><a href="#"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </footer>
 </div>
-
 <div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    <a href="#" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-sanitize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-messages.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5//angular-aria.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<script type="text/javascript" src="/js/contact_application.js"></script>
+<script type="text/javascript" src="/js/contact_controllers.js"></script>
+<script type="text/javascript" src="/js/contact_services.js"></script>
+
+<!-- <script src="/js/main.js"></script> -->
+
 <!-- Carousel -->
 <script src="js/owl.carousel.min.js"></script>
 <!-- countTo -->
@@ -336,88 +792,5 @@
 <!-- Main -->
 <script src="js/main.js"></script>
 
-<!-- CONTACT　-->
-<script>
-
-    var regex_pattern = function (type) {
-        let result = null;
-        switch (type) {
-            case "email":
-                result = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
-                break;
-
-            default:
-        }
-        return result;
-    };
-
-    var is_valid = function (field_value, label, validator) {
-        let result = true;
-        var labels = document.getElementById(label);
-        var format = labels.getElementsByClassName("format").item(0);
-        if (format) {
-            if (validator) {
-                format.style.display = "none";
-            } else {
-                format.style.display = "block";
-                result = false;
-            }
-        }
-        return result;
-    };
-
-    var change = function (type, input, label) {
-        var form = document.forms["contact"];
-        var success = is_valid(form[input].value, label, (form[input].value != ""));
-        if (success) {
-            is_valid(form[input].value, label, form[input].value.match(regex_pattern(type)));
-        }
-    };
-
-    var push_value = function (array, field) {
-        if (document.forms.contact[field].checked) {
-            array.push(document.forms.contact[field].value);
-        }
-    };
-
-    var Create = function () {
-
-        var email = document.forms.contact.email.value;
-        var name = document.forms.contact.name.value;
-        var address = document.forms.contact.address.value;
-        var tel = document.forms.contact.tel.value;
-        var introducer = document.forms.contact.introducer.value;
-        var message = document.forms.contact.message.value;
-
-        var products = [];
-        push_value(products, products1);
-        push_value(products, products2);
-
-        var postdata = JSON.stringify({
-            email: email,
-            name: name,
-            address: address,
-            tel: tel,
-            products: products,
-            introducer: introducer,
-            message: message
-        });
-
-        fetch("/api/contact", {
-            method: 'POST', body: postdata,
-            headers: new Headers({"Content-type": "application/json"})
-        }).then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            var result = json;
-            document.getElementById("complete").style.display = "block";
-        });
-
-    };
-
-</script>
-<!-- CONTACT　-->
-
 </body>
 </html>
-
