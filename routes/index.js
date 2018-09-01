@@ -17,7 +17,7 @@ DocSchema.index({"email": 1}, {unique: true});
 
 var Doc = mongoose.model('Doc', DocSchema);
 
-mongoose.connect("mongodb://localhost/test", {});
+mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
 
 // index
 
@@ -38,9 +38,9 @@ var send_mail = function (body, callback) {
     var smtp_user = mailer.createTransport(mailsetting); //SMTPの接続
 
     var result_mail = {
-        from: "oda.mikio@gmail.com",
+        from: "saito@cocoro.jpn.com",
         to: body.email,
-        bcc: "oda.mikio@gmail.com",
+        bcc: "saito@cocoro.jpn.com",
         subject: "Thanks!",
         html: "Message"
     };
