@@ -17,11 +17,10 @@ DocSchema.index({"email": 1}, {unique: true});
 
 var Doc = mongoose.model('Doc', DocSchema);
 
-mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
+//mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
+mongoose.connect("mongodb://localhost/test", {});
 
 // index
-
-// localhost:3000/insert/namae/atai
 
 var send_mail = function (body, callback) {
 
@@ -38,12 +37,20 @@ var send_mail = function (body, callback) {
     var smtp_user = mailer.createTransport(mailsetting); //SMTPの接続
 
     var result_mail = {
-        from: "saito@cocoro.jpn.com",
+        from: "oda.mikio@gmail.com",
         to: body.email,
-        bcc: "saito@cocoro.jpn.com",
+        bcc: "oda.mikio@gmail.com",
         subject: "Thanks!",
         html: "Message"
     };
+
+    //var result_mail = {
+    //    from: "saito@cocoro.jpn.com",
+    //    to: body.email,
+    //    bcc: "saito@cocoro.jpn.com",
+    //    subject: "Thanks!",
+    //    html: "Message"
+    //};
 
     smtp_user.sendMail(result_mail, function (error) {
         callback(error);
