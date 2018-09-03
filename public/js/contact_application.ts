@@ -73,7 +73,6 @@ Application.directive("includeTelNumber", () => {
     };
 });
 
-
 Application.controller('AlertDialogController', ['$scope', '$uibModalInstance', 'items',
     ($scope: any, $uibModalInstance: any, items: any): void => {
 

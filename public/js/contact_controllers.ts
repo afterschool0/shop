@@ -2,16 +2,16 @@
 
 let Controllers = angular.module('Controllers', []);
 
-Controllers.controller("ContactController", ["$scope", "$log","$uibModal", 'MailerService',
-    function ($scope, $log,$uibModal, MailerService) {
+Controllers.controller("ContactController", ["$scope", "$log", "$uibModal", 'MailerService',
+    function ($scope, $log, $uibModal, MailerService) {
 
-         $scope.form = {};
+        $scope.form = {};
 
-        let progress =  (value) => {
+        let progress = (value) => {
             $scope.progress = value;
         };
 
-        let error_handler =  (code, message) => {
+        let error_handler = (code, message) => {
             progress(false);
             $scope.error = message;
             $log.error(message);
@@ -37,9 +37,8 @@ Controllers.controller("ContactController", ["$scope", "$log","$uibModal", 'Mail
         $scope.Send = () => {
             $scope.error = "";
             progress(true);
-
             let form: any = $scope.form;
-            MailerService.Send(form,  (result: any): void => {
+            MailerService.Send(form, (result: any): void => {
                 $scope.error = result.message;
                 progress(false);
                 alert("ok");

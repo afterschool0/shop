@@ -4,13 +4,16 @@ var mailer = require('nodemailer');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var DocSchema = new Schema({
-    email: String,
-    name: String,
-    address: String,
-    tel: String,
-    products: [String],
-    introducer: String,
-    message: String
+    user: {
+        email: String,
+        name: String,
+        address: String,
+        tel: String,
+        products: [String],
+        introducer: String,
+        message: String,
+    },
+    system: {}
 });
 var timestamp = require('./timestamp');
 DocSchema.plugin(timestamp);
@@ -58,13 +61,18 @@ router.post('/api/contact', function (request, response, next) {
     }
     //conformity
     var postdata = new Doc({
-        email: content.thanks,
-        name: content.username,
-        address: content.street,
-        tel: content.contacttel,
-        products: content.products,
-        introducer: content.introducer,
-        message: content.request
+        user: {
+            email: content.thanks,
+            name: content.username,
+            address: content.street,
+            tel: content.contacttel,
+            products: products,
+            introducer: content.introducer,
+            message: content.request
+        },
+        system: {
+            status: "new"
+        }
     });
     postdata.save().then(function (saved_doc) {
         send_mail(content, function (error) {
@@ -81,7 +89,7 @@ router.post('/api/contact', function (request, response, next) {
 });
 router.get('/api/contact/:email', function (request, response, next) {
     var email = decodeURIComponent(request.params.email);
-    Doc.findOne({ email: email }).then(function (doc) {
+    Doc.find({ email: email }).then(function (doc) {
         response.json(doc);
     });
 });
@@ -104,34 +112,4 @@ router.delete('/api/contact/:email', function (request, response, next) {
     });
 });
 module.exports = router;
-/*
-var send_mail = function (to, callback) {
-
-    var mailer = require('nodemailer');
-
-    var mailsetting = {
-        "service": "gmail",
-        "auth": {
-            "user": "inbox.7thcode@gmail.com",
-            "pass": "33550336"
-        }
-    };
-
-    var smtp_user = mailer.createTransport(mailsetting); //SMTPの接続
-
-    var result_mail = {
-        from: "oda.mikio@gmail.com",
-        to: to,
-        bcc: "oda.mikio@gmail.com",
-        subject: "subject",
-        html: "Message"
-    };
-
-    smtp_user.sendMail(result_mail, function (error) {
-        callback(error);
-        smtpUser.close();
-    });
-
-};
-*/ 
 //# sourceMappingURL=index.js.map
