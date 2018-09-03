@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Shop &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+    <title>Cocoro ~ Kiseki & Shinpi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by gettemplates.co"/>
-    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive"/>
-    <meta name="author" content="gettemplates.co"/>
+    <meta name="description" content="placenta cancer health beauty" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Cocoro" />
 
 
     <!-- Facebook and Twitter integration -->
@@ -92,8 +92,7 @@
 						      </span>
                             </div>
                         </li>
-                        <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i
-                                class="icon-shopping-cart"></i></span></a></li>
+                        <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -101,8 +100,7 @@
         </div>
     </nav>
 
-    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner"
-            style="background-image:url(images/img_bg_2.jpg);">
+    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -110,6 +108,7 @@
                     <div class="display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeIn">
                             <h1>Contact Us</h1>
+                            <h2></h2>
                         </div>
                     </div>
                 </div>
@@ -135,46 +134,86 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <h3>Get In Touch</h3>
-                    <!-- CONTACT　-->
                     <form id="contact" action="#">
-                        <!-- CONTACT　-->
                         <div class="row form-group">
                             <div class="col-md-6">
                                 <!-- <label for="fname">First Name</label> -->
-                                <input type="text" id="fname" onkeyup="change('fname','fname_label');" class="form-control" placeholder="Your firstname">
-                                <div id="fname_label">required</div>
+                                <input type="text" id="name" onkeyup="change('name', 'name','name_label');"
+                                       class="form-control" placeholder="Your name">
+                                <div id="name_label">
+                                    <div class="require">required</div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
                                 <!-- <label for="lname">Last Name</label> -->
-                                <input type="text" id="lname" class="form-control" placeholder="Your lastname">
+                                <input type="text" id="address" onkeyup="change('address','address','address_label');"
+                                       class="form-control" placeholder="Your address">
+                                <div id="address_label">
+                                    <div class="require">required</div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="email">Email</label> -->
-                                <input type="text" id="email" class="form-control" placeholder="Your email address">
+                                <input type="text" id="tel" onkeyup="change('tel','tel','tel_label');"
+                                       class="form-control" placeholder="Your tel">
+                                <div id="tel_label">
+                                    <div class="require">required</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <!-- <label for="email">Email</label> -->
+                                <input type="email" id="email" onkeyup="change('email','email','email_label');" class="form-control" placeholder="Your email address">
+                                <div id="email_label">
+                                    <div class="require">required</div>
+                                    <div class="format">format</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="checkbox-inline"><input type="checkbox" id="products1" value="cocoro">cocoro</label>
+                                <label class="checkbox-inline"><input type="checkbox" id="products2" value="cocoro2">cocoro
+                                    2</label>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="subject">Subject</label> -->
-                                <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+                                <input type="text" id="introducer"
+                                       onkeyup="change('name','introducer','introducer_label');" class="form-control"
+                                       placeholder="introducer">
+                                <div id="introducer_label">
+                                    <div class="require">required</div>
+                                </div>
+
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <!-- <label for="message">Message</label> -->
-                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10" class="form-control"
+                                          placeholder="message"></textarea>
+
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <!-- CONTACT　-->
                             <input type="button" onclick="Create();" value="Send Message" class="btn btn-primary">
                             <div id="complete" style="display:none;">complete</div>
-                            <!-- CONTACT　-->
+
                         </div>
 
                     </form>
@@ -254,7 +293,8 @@
             <div class="row copyright">
                 <div class="col-md-12 text-center">
                     <p>
-                        <small class="block">&copy; 2018 Cocoro. co.,ltd. All Rights Reserved.</small>
+                        <small class="block">&copy; 2016 Cocoro. co.,ltd. All Rights Reserved.</small>
+
                     </p>
                     <p>
                     <ul class="fh5co-social-icons">
@@ -299,24 +339,69 @@
 <!-- CONTACT　-->
 <script>
 
-    var change = function (input, label) {
-        let field_value = document.forms.contact[input].value;
-        if (field_value == "") {
-            document.getElementById(label).style.display = "block";
-        } else {
-            document.getElementById(label).style.display = "none";
+    var regex_pattern = function (type) {
+        let result = null;
+        switch (type) {
+            case "email":
+                result = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+                break;
+
+            default:
+        }
+        return result;
+    };
+
+    var is_valid = function (field_value, label, validator) {
+        let result = true;
+        var labels = document.getElementById(label);
+        var format = labels.getElementsByClassName("format").item(0);
+        if (format) {
+            if (validator) {
+                format.style.display = "none";
+            } else {
+                format.style.display = "block";
+                result = false;
+            }
+        }
+        return result;
+    };
+
+    var change = function (type, input, label) {
+        var form = document.forms["contact"];
+        var success = is_valid(form[input].value, label, (form[input].value != ""));
+        if (success) {
+            is_valid(form[input].value, label, form[input].value.match(regex_pattern(type)));
+        }
+    };
+
+    var push_value = function (array, field) {
+        if (document.forms.contact[field].checked) {
+            array.push(document.forms.contact[field].value);
         }
     };
 
     var Create = function () {
 
         var email = document.forms.contact.email.value;
-        var fname = document.forms.contact.fname.value;
-        var lname = document.forms.contact.lname.value;
-        var subject = document.forms.contact.subject.value;
+        var name = document.forms.contact.name.value;
+        var address = document.forms.contact.address.value;
+        var tel = document.forms.contact.tel.value;
+        var introducer = document.forms.contact.introducer.value;
         var message = document.forms.contact.message.value;
 
-        var postdata = JSON.stringify({email: email, fname: fname, lname: lname, subject: subject, message: message});
+        var products = [];
+        push_value(products, products1);
+        push_value(products, products2);
+
+        var postdata = JSON.stringify({
+            email: email,
+            name: name,
+            address: address,
+            tel: tel,
+            products: products,
+            introducer: introducer,
+            message: message
+        });
 
         fetch("/api/contact", {
             method: 'POST', body: postdata,
@@ -324,8 +409,10 @@
         }).then(function (response) {
             return response.json();
         }).then(function (json) {
+            var result = json;
             document.getElementById("complete").style.display = "block";
         });
+
     };
 
 </script>

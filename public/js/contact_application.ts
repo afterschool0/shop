@@ -5,7 +5,6 @@ let Application = angular.module("Application", [
     'Services',
     "Controllers",
     'ui.bootstrap',
-    'duScroll'
 ]);
 
 Application.run(["$rootScope", ($rootScope: any) => {
@@ -73,3 +72,15 @@ Application.directive("includeTelNumber", () => {
         }
     };
 });
+
+
+Application.controller('AlertDialogController', ['$scope', '$uibModalInstance', 'items',
+    ($scope: any, $uibModalInstance: any, items: any): void => {
+
+        $scope.message = items;
+
+        $scope.cancel = (): void => {
+            $uibModalInstance.dismiss();
+        };
+
+    }]);
