@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var _config = require('config');
 var mailer = require('nodemailer');
+var config = _config.get("systems");
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var DocSchema = new Schema({
@@ -20,21 +22,15 @@ DocSchema.plugin(timestamp);
 //DocSchema.index({"email": 1}, {unique: true});
 var Doc = mongoose.model('Doc', DocSchema);
 //mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
-mongoose.connect("mongodb://localhost/contact", {});
+mongoose.connect(config.db, {});
 // index
 var send_mail = function (content, callback) {
-    var mailsetting = {
-        "service": "gmail",
-        "auth": {
-            "user": "inbox.7thcode@gmail.com",
-            "pass": "33550336"
-        }
-    };
+    var mailsetting = config.mailserver;
     var smtp_user = mailer.createTransport(mailsetting); //SMTPの接続
     var result_mail = {
-        from: "oda.mikio@gmail.com",
+        from: config.mailsender,
         to: content.thanks,
-        bcc: "oda.mikio@gmail.com",
+        bcc: config.mailsender,
         subject: "Thanks!",
         html: " \n                username  : " + content.username + "\n                street    : " + content.street + "\n                contacttel:  " + content.contacttel + "\n                introducer:  " + content.introducer + "\n                request   :  " + content.request + "\n        "
     };

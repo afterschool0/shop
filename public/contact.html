@@ -197,10 +197,15 @@
 
                                         <div class="form-group row">
                                             <div class="col-xs-12 col-md-4" style="margin-bottom: 10px;">
+                                                <div class="input-label">
+                                                    <span ng-if="!inq.products.$valid">
+                                                        <span class="validation-error error-background">required</span>
+                                                    </span>
+                                                </div>
                                             </div>
                                             <div class="col-xs-12 col-md-6">
-                                                <label class="checkbox-inline"><input type="checkbox" id="products1" ng-model="form.products1" value="cocoro">cocoro</label>
-                                                <label class="checkbox-inline"><input type="checkbox" id="products2" ng-model="form.products2" value="cocoro2">cocoro 2</label>
+                                                <label class="checkbox-inline"><input type="checkbox" id="products1" ng-model="form.products1" ng-change="inq.products.$valid = form.products1 || form.products2 " value="cocoro">cocoro</label>
+                                                <label class="checkbox-inline"><input type="checkbox" id="products2" ng-model="form.products2" ng-change="inq.products.$valid = form.products1 || form.products2 " value="cocoro2">cocoro 2</label>
                                             </div>
                                         </div>
 
@@ -240,9 +245,10 @@
                                         <div class="row under-line"></div>
 
                                         <div class="form-group text-center row">
-                                            <button ng-show="!inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#d1c286;color:#ffffff;">未入力の必須項目、<br/>または入力内容にエラーがあります。</button>
-                                            <!--<button ng-show="inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#f39d1f;color:#ffffff;" ng-click="go_confirm();">入力内容を確認する</button>-->
-                                            <button ng-show="inq.$valid" class="btn" style="width:60%;font-size:2rem;background-color:#f39d1f;color:#ffffff;" ng-click="Send();" ng-disabled="progress">送信する</button>
+                                            <div class="col-xs-12" style="margin-bottom: 10px;">
+                                            <button ng-show="!inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#d1c286;color:#ffffff;" ng-disabled="true">送信する</button>
+                                            <button ng-show="inq.$valid" class="btn" style="width:70%;font-size:2rem;background-color:#f39d1f;color:#ffffff;" ng-disabled="progress" ng-click="Send();">送信する</button>
+                                            </div>
                                         </div>
 
                                     </form>

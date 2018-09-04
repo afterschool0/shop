@@ -1,7 +1,10 @@
 let express = require('express');
 let router = express.Router();
-let mailer = require('nodemailer');
 
+const _config: any = require('config');
+const mailer:any = require('nodemailer');
+
+const config: any = _config.get("systems");
 
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
@@ -27,26 +30,20 @@ DocSchema.plugin(timestamp);
 const Doc = mongoose.model('Doc', DocSchema);
 
 //mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
-mongoose.connect("mongodb://localhost/contact", {});
+mongoose.connect(config.db, {});
 
 // index
 
 const send_mail = (content, callback) => {
 
-    var mailsetting: any = {
-        "service": "gmail",
-        "auth": {
-            "user": "inbox.7thcode@gmail.com",
-            "pass": "33550336"
-        }
-    };
+    var mailsetting: any = config.mailserver;
 
     var smtp_user: any = mailer.createTransport(mailsetting); //SMTPの接続
 
     var result_mail: any = {
-        from: "oda.mikio@gmail.com",
+        from: config.mailsender,
         to: content.thanks,
-        bcc: "oda.mikio@gmail.com",
+        bcc: config.mailsender,
         subject: "Thanks!",
         html: ` 
                 username  : ${content.username}
