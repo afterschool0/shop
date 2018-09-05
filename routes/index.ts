@@ -30,7 +30,7 @@ DocSchema.plugin(timestamp);
 const Doc = mongoose.model('Doc', DocSchema);
 
 //mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
-mongoose.connect(config.db, {});
+mongoose.connect(config.db, {useNewUrlParser:true}).catch(error => {});
 
 // index
 
