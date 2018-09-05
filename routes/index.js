@@ -22,7 +22,8 @@ DocSchema.plugin(timestamp);
 //DocSchema.index({"email": 1}, {unique: true});
 var Doc = mongoose.model('Doc', DocSchema);
 //mongoose.connect("mongodb://admin:Nipp0nbashi7@localhost/test", {});
-mongoose.connect(config.db, {});
+mongoose.connect(config.db, { useNewUrlParser: true }).catch(function (error) {
+});
 // index
 var send_mail = function (content, callback) {
     var mailsetting = config.mailserver;
