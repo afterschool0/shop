@@ -1,6 +1,4 @@
 node_modules/
 .DS_Store
 config/default.js
-.DS_Store
 package-lock.json
-.DS_Store
