@@ -6,7 +6,6 @@ Services.factory('MailSend', ['$resource', ($resource) => {
     return $resource('/api/contact', {}, {send: {method: 'POST'}});
 }]);
 
-
 Services.service('MailerService', ["MailSend",
     function (MailSend) {
         this.Send = function (content, callback, error) {
